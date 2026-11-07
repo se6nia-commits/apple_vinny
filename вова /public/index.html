@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Service Management System</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark">S</span><div><strong id="brandName">Service Center</strong><small>Management System</small></div></div>
+    <nav id="nav">
+      <button data-page="dashboard" class="active"><span>⌂</span>Главная панель</button>
+      <button data-page="repairs"><span>⌁</span>Ремонты</button>
+      <button data-page="products"><span>▣</span>Товары в наличии</button>
+      <button data-page="parts"><span>⚙</span>Запчасти</button>
+      <button data-page="operations"><span>↻</span>История операций</button>
+      <button data-page="finance"><span>↗</span>Финансы и статистика</button>
+      <button data-page="settings"><span>⚙</span>Настройки</button>
+    </nav>
+    <div class="sidebar-user"><div class="avatar">A</div><div><strong>Администратор</strong><small>Полный доступ</small></div></div>
+  </aside>
+  <main>
+    <header>
+      <button class="menu-btn" aria-label="Открыть меню">☰</button>
+      <div class="global-search"><span>⌕</span><input id="globalSearch" placeholder="Поиск по системе..." autocomplete="off"><div id="searchResults"></div></div>
+      <button id="notifications" class="icon-btn" aria-label="Уведомления">♢<i></i></button>
+      <div class="currency-picker"><label for="currency">Валюта</label><select id="currency"><option value="UAH">₴ UAH</option><option value="USD">$ USD</option><option value="EUR">€ EUR</option></select></div>
+    </header>
+    <section id="app"></section>
+  </main>
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true"></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="/app.js" type="module"></script>
+</body>
+</html>

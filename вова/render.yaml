@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: service-management-system
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /
+    disk:
+      name: service-data
+      mountPath: /opt/render/project/src/data
+      sizeGB: 1
